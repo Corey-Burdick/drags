@@ -1,0 +1,3 @@
+/home/corey/Code/drags/build/CMakeFiles/drags.dir
+/home/corey/Code/drags/build/CMakeFiles/edit_cache.dir
+/home/corey/Code/drags/build/CMakeFiles/rebuild_cache.dir
