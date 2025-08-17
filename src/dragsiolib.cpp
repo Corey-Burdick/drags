@@ -35,9 +35,13 @@ void printIntVector(std::vector<int> inputVector, bool verbose) {
 }
 
 std::vector<int> generateRandomVector(int size) {
-  
+
   std::vector<int> output(size);
-  srand(time(NULL));
+
+  auto now = std::chrono::system_clock::now();
+  auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch());
+  unsigned int seed = static_cast<unsigned int>(milliseconds.count());
+  srand(seed);
   
   for (int i = 0; i < size; i++) {
     output[i] = rand() % size + 1;

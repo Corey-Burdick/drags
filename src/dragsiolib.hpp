@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <vector>
-#include <ctime>
+#include <chrono>
 #include <random>
 
 void printIntVector(std::vector<int> inputVector, bool verbose);

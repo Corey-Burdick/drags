@@ -1,5 +1,6 @@
 #include "src/dragsiolib.hpp"
 
+#include <algorithm>
 
 int main(int argc, char* argv[]) {
   
@@ -10,7 +11,11 @@ int main(int argc, char* argv[]) {
   printf("Generated Array: ");
   printIntVector(mainVector, verboseMode);
 
-  
+  std::sort(mainVector.begin(), mainVector.end());
+
+  printf("Sorted Array: ");
+  printIntVector(mainVector, verboseMode);
+
   return 0;
 
 }
