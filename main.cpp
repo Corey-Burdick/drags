@@ -1,4 +1,5 @@
 #include "src/dragsiolib.hpp"
+#include "src/dragsortlib.hpp"
 
 #include <algorithm>
 
@@ -11,7 +12,7 @@ int main(int argc, char* argv[]) {
   printf("Generated Array: ");
   printIntVector(mainVector, verboseMode);
 
-  std::sort(mainVector.begin(), mainVector.end());
+  bubbleSort(mainVector);
 
   printf("Sorted Array: ");
   printIntVector(mainVector, verboseMode);
