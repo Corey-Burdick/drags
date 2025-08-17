@@ -3,6 +3,6 @@ project(drags VERSION 0.0.01)
 
 set(CMAKE_USE_RELATIVE_PATHS TRUE)
 
-set(SOURCE_LIST main.cpp src/dragsiolib.cpp src/dragsortlib.cpp)
+set(SOURCE_LIST src/main.cpp src/dragsiolib.cpp src/dragsortlib.cpp)
 
 add_executable(drags ${SOURCE_LIST})

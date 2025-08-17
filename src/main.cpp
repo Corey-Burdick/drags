@@ -1,5 +1,5 @@
-#include "src/dragsiolib.hpp"
-#include "src/dragsortlib.hpp"
+#include "dragsiolib.hpp"
+#include "dragsortlib.hpp"
 
 #include <algorithm>
 
