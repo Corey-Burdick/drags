@@ -1,3 +1,6 @@
+#ifndef DRAGSIOLIB_HEADER
+#define DRAGSIOLIB_HEADER
+
 #include <stdio.h>
 #include <vector>
 #include <chrono>
@@ -26,3 +29,5 @@ private:
 
 void printIntVector(std::vector<int> inputVector, bool verbose);
 std::vector<int> generateRandomVector(int size);
+
+#endif // DRAGSIOLIB_HEADER
