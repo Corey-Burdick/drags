@@ -1,8 +1,6 @@
 #include "dragsiolib.hpp"
 #include "dragsortlib.hpp"
 
-#include <algorithm>
-
 int main(int argc, char* argv[]) {
   
   bool timerMode = true;
