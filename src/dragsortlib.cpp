@@ -18,13 +18,17 @@ void bubbleSort(std::vector<int>& inputArray) {
 
 }
 
-void quickSort(std::vector<int> &inputArray, int start, int end) {
+void quickSort(std::vector<int> &inputArray) {
+  m_QuickSort(inputArray, 0, inputArray.size() - 1);
+}
+
+void m_QuickSort(std::vector<int> &inputArray, int start, int end) {
   
   if (end <= start) return;
 
   int pivot = partition(inputArray, start, end);
-  quickSort(inputArray, start, pivot - 1);
-  quickSort(inputArray, pivot + 1, end);
+  m_QuickSort(inputArray, start, pivot - 1);
+  m_QuickSort(inputArray, pivot + 1, end);
 
 }
 
