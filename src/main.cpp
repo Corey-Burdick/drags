@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
   printf("\n");
 
   if (timerMode) my_Timer.reset();
-  bubbleSort(mainVector);
+  quickSort(mainVector, 0, mainVector.size() - 1);
 
   if (timerMode) printf("Time to Sort: %lldms\n", my_Timer.elapsed_milliseconds());
   printf("Sorted Array: ");
