@@ -3,10 +3,12 @@
 
 #include <stdint.h>
 #include <vector>
+#include <algorithm>
 
 enum sortMode : uint8_t {
   bubble = 0,
   quick = 1,
+  intro = 2,
 };
 
 void bubbleSort(std::vector<int>& inputArray);

@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[]) {
   
-  uint8_t sorter = sortMode::quick;
+  uint8_t sorter = sortMode::intro;
   bool timerMode = true;
   bool verboseMode = false;
   int mainSize = 20000;
@@ -27,6 +27,10 @@ int main(int argc, char* argv[]) {
     case sortMode::quick:
       quickSort(mainVector);
       printf("Sorting using quick sort.\n");
+      break;
+    case sortMode::intro:
+      std::sort(mainVector.begin(), mainVector.end());
+      printf("Sorting using intro sort.\n");
       break;
     default:
       printf("Invalid Sort Mode. Closing...\n");
