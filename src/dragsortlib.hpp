@@ -1,7 +1,13 @@
 #ifndef DRAGSORTLIB_HEADER
 #define DRAGSORTLIB_HEADER
 
+#include <stdint.h>
 #include <vector>
+
+enum sortMode : uint8_t {
+  bubble = 0,
+  quick = 1,
+};
 
 void bubbleSort(std::vector<int>& inputArray);
 void quickSort(std::vector<int> &inputArray, int start, int end);
