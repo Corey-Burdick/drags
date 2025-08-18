@@ -11,12 +11,13 @@ int main(int argc, char* argv[]) {
   Timer my_Timer;
   std::vector<int> mainVector = generateRandomVector(mainSize);
 
-  if (timerMode) printf("Time to Generate: %lldms\n", my_Timer.elapsed_milliseconds());
+  long long genTime = my_Timer.elapsed_milliseconds();
   printf("Generated Array: ");
   printIntVector(mainVector, verboseMode);
+  if (timerMode) printf("Time to Generate: %lldms\n", genTime);
   printf("\n");
 
-  if (timerMode) my_Timer.reset();
+  my_Timer.reset();
 
   switch (sorter) {
     case sortMode::bubble:
@@ -33,10 +34,10 @@ int main(int argc, char* argv[]) {
   }
 
 
-  if (timerMode) printf("Time to Sort: %lldms\n", my_Timer.elapsed_milliseconds());
-
+  long long sortTime = my_Timer.elapsed_milliseconds();
   printf("Sorted Array: ");
   printIntVector(mainVector, verboseMode);
+  if (timerMode) printf("Time to Sort: %lldms\n", sortTime);
 
   return 0;
 
