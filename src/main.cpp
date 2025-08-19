@@ -1,12 +1,34 @@
 #include "dragsiolib.hpp"
 #include "dragsortlib.hpp"
 
+#include <cstring>
+
 int main(int argc, char* argv[]) {
   
   uint8_t sorter = sortMode::intro;
-  bool timerMode = true;
+  bool timerMode = false;
   bool verboseMode = false;
   int mainSize = 20000;
+
+  if (argc > 1) {
+    for (int i = 1; i < argc; i++) {
+      if (argv[i][0] == '-') {
+        for (int j = 1; j < strlen(argv[i]); j++) {
+          switch (argv[i][j]) {
+            case 't':
+              timerMode = true;
+              break;
+            case 'v':
+              verboseMode = true;
+              break;
+            default:
+              printf("Not a valid option.\n");
+              break;
+          }
+        }
+      }
+    }
+  }
 
   Timer my_Timer;
   std::vector<int> mainVector = generateRandomVector(mainSize);
