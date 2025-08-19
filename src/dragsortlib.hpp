@@ -6,9 +6,10 @@
 #include <algorithm>
 
 enum sortMode : uint8_t {
-  bubble = 0,
-  quick = 1,
-  intro = 2,
+  none = 0,
+  bubble = 1,
+  quick = 2,
+  intro = 3
 };
 
 void bubbleSort(std::vector<int>& inputArray);

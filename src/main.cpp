@@ -5,21 +5,37 @@
 
 int main(int argc, char* argv[]) {
   
-  uint8_t sorter = sortMode::intro;
+  uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
-  int mainSize = 20000;
+  int mainSize = 10;
 
   if (argc > 1) {
     for (int i = 1; i < argc; i++) {
       if (argv[i][0] == '-') {
         for (int j = 1; j < strlen(argv[i]); j++) {
           switch (argv[i][j]) {
+            case 'n':
+              mainSize = std::atoi(argv[i + 1]);
+              if (mainSize <= 0) {
+                printf("Drags only allows the use of strings that are a positive integer\n");
+                return 0;
+              }
+              break;
             case 't':
               timerMode = true;
               break;
             case 'v':
               verboseMode = true;
+              break;
+            case 'b':
+              sorter = sortMode::bubble;
+              break;
+            case 'q':
+              sorter = sortMode::quick;
+              break;
+            case 'i':
+              sorter = sortMode::intro;
               break;
             default:
               printf("Not a valid option.\n");
@@ -42,6 +58,9 @@ int main(int argc, char* argv[]) {
   my_Timer.reset();
 
   switch (sorter) {
+    case sortMode::none:
+      printf("No sort chosen. Closing...\n");
+      return 0;
     case sortMode::bubble:
       bubbleSort(mainVector);
       printf("Sorting using bubble sort.\n");
