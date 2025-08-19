@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/corey/Code/drags/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
