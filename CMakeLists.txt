@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(drags VERSION 0.0.01)
+project(drags VERSION 0.1.01)
 
 set(CMAKE_USE_RELATIVE_PATHS TRUE)
 
