@@ -26,7 +26,7 @@ void printIntVector(std::vector<int> inputVector, bool verbose) {
         if (i < inputVector.size() && i < 10) {
           printf(", ");
         }
-        if (i == 10) {
+        if (i == 10 && inputVector.size() > 10) {
           printf(". . .\n");
         }
       }
