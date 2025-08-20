@@ -17,7 +17,9 @@ int main(int argc, char* argv[]) {
         for (int j = 1; j < strlen(argv[i]); j++) {
           switch (argv[i][j]) {
             case 'n':
-              mainSize = std::atoi(argv[i + 1]);
+              if (argc >= i) {
+                mainSize = std::atoi(argv[argc - 1]);
+              }
               if (mainSize <= 0) {
                 printf("Drags only allows the use of strings that are a positive integer\n");
                 return 0;
