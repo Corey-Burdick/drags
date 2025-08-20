@@ -3,9 +3,16 @@
 
 #include <cstring>
 
+// Drags - Quick and Dirty Random Array Generator and Sorter
+// Version 0.1.02 Stable
+// 
+// Drags will generate an array (std::vector<int>) of numbers.
+// The user will be able to use the "-n" option to change the numbers of elements.
+// the user can also use different sorting algorithms as defined in "dragsortlib.cpp"
+
 int main(int argc, char* argv[]) {
- 
-  char version[] = "0.1.01 Development";
+  
+  char version[] = "0.1.02 Stable";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
