@@ -4,7 +4,8 @@
 #include <cstring>
 
 int main(int argc, char* argv[]) {
-  
+ 
+  char version[] = "0.1.01 Development";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
@@ -36,6 +37,25 @@ int main(int argc, char* argv[]) {
               break;
             case 'i':
               sorter = sortMode::intro;
+              break;
+            case 'h':
+            case 'H':
+              printf("Drags Version - %s\n"
+              "\n" 
+              "Drags generates a list of random numbers, then sort them with different algorithms.\n"
+              "\n"
+              "-- [OPTIONS] --\n"
+              "-h (or)\n"
+              "-H   Show help (You are here).\n"
+              "-n   Change the number of elements generated and sorted. Follow with a positive number.\n"
+              "-t   Activate Timer mode.\n"
+              "-v   Activate Verbose mode.\n"
+              "\n"
+              "-- [SORTING ALGORITHMS] --\n"
+              "-b   Bubble Sort (Not recommended)\n"
+              "-q   Quick Sort\n"
+              "-i   Intro Sort\n", version);
+              return 0;
               break;
             default:
               printf("Not a valid option.\n");

@@ -23,9 +23,10 @@ void printIntVector(std::vector<int> inputVector, bool verbose) {
       for (int i = 0; i < 10;) {
         printf("%d", inputVector[i]);
         i++;
-        if (i < 10) {
+        if (i < inputVector.size() && i < 10) {
           printf(", ");
-        } else {
+        }
+        if (i == 10) {
           printf(". . .\n");
         }
       }
