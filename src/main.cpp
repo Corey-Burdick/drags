@@ -98,7 +98,7 @@ int main(int argc, char* argv[]) {
       printf("Sorting using bubble sort.\n");
       break;
     case sortMode::quick:
-      quickSort(mainVector);
+      quickSort(mainVector, 0, mainVector.size() - 1);
       printf("Sorting using quick sort.\n");
       break;
     case sortMode::intro:
