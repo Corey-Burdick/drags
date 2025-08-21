@@ -13,8 +13,6 @@ void printIntVector(std::vector<int> inputVector, bool verbose) {
         i++;
         if (i < inputVector.size()) {
           printf(", ");
-        } else {
-          printf("\n");
         }
       }
       break;
@@ -27,12 +25,12 @@ void printIntVector(std::vector<int> inputVector, bool verbose) {
           printf(", ");
         }
         if (i == 10 && inputVector.size() > 10) {
-          printf(". . .\n");
+          printf(". . .");
         }
       }
     break;
   }
-
+  printf("\n");
 }
 
 std::vector<int> generateRandomVector(int size) {
