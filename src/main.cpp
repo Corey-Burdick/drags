@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
               "\n"
               "-- [SORTING ALGORITHMS] --\n"
               "-b   Bubble Sort (Not recommended)\n"
-              "-q   Quick Sort\n"
+              "-q   Quick Sort (Currently Disabled)\n"
               "-i   Intro Sort\n", version);
               return 0;
               break;
@@ -97,10 +97,10 @@ int main(int argc, char* argv[]) {
       bubbleSort(mainVector);
       printf("Sorting using bubble sort.\n");
       break;
-    case sortMode::quick:
-      quickSort(mainVector, 0, mainVector.size() - 1);
-      printf("Sorting using quick sort.\n");
-      break;
+    //case sortMode::quick:
+    //  quickSort(mainVector, 0, mainVector.size() - 1);
+    //  printf("Sorting using quick sort.\n");
+    //  break;
     case sortMode::intro:
       std::sort(mainVector.begin(), mainVector.end());
       printf("Sorting using intro sort.\n");
