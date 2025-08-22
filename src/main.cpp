@@ -97,10 +97,10 @@ int main(int argc, char* argv[]) {
       bubbleSort(mainVector);
       printf("Sorting using bubble sort.\n");
       break;
-    //case sortMode::quick:
-    //  quickSort(mainVector, 0, mainVector.size() - 1);
-    //  printf("Sorting using quick sort.\n");
-    //  break;
+    case sortMode::quick:
+      quickSort(mainVector, 0, mainVector.size() - 1);
+      printf("Sorting using quick sort.\n");
+      break;
     case sortMode::intro:
       std::sort(mainVector.begin(), mainVector.end());
       printf("Sorting using intro sort.\n");
