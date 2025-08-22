@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
               "\n"
               "-- [SORTING ALGORITHMS] --\n"
               "-b   Bubble Sort (Not recommended)\n"
-              "-q   Quick Sort (Currently Disabled)\n"
+              "-q   Quick Sort\n"
               "-i   Intro Sort\n", version);
               return 0;
               break;
