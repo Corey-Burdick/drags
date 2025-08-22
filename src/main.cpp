@@ -12,7 +12,7 @@
 
 int main(int argc, char* argv[]) {
   
-  char version[] = "0.1.03 Stable";
+  char version[] = "0.1.04 Stable";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
@@ -24,8 +24,11 @@ int main(int argc, char* argv[]) {
         for (int j = 1; j < strlen(argv[i]); j++) {
           switch (argv[i][j]) {
             case 'n':
-              if (argc >= i) {
-                mainSize = std::atoi(argv[argc - 1]);
+              if (argc > i + 1) {
+                mainSize = std::atoi(argv[i + 1]);
+              } else {
+                printf("Option -n must be followed by a positive integer.\n");
+                return 0;
               }
               if (mainSize <= 0) {
                 printf("Drags only allows the use of strings that are a positive integer\n");
@@ -95,7 +98,7 @@ int main(int argc, char* argv[]) {
       printf("Sorting using bubble sort.\n");
       break;
     case sortMode::quick:
-      quickSort(mainVector);
+      quickSort(mainVector, 0, mainVector.size() - 1);
       printf("Sorting using quick sort.\n");
       break;
     case sortMode::intro:
