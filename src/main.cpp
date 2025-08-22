@@ -12,7 +12,7 @@
 
 int main(int argc, char* argv[]) {
   
-  char version[] = "0.1.03 Stable";
+  char version[] = "0.1.04 Stable";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
