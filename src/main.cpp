@@ -12,7 +12,7 @@
 
 int main(int argc, char* argv[]) {
   
-  char version[] = "0.1.04 Stable";
+  char version[] = "0.1.05 Stable";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
@@ -28,11 +28,11 @@ int main(int argc, char* argv[]) {
                 mainSize = std::atoi(argv[i + 1]);
               } else {
                 printf("Option -n must be followed by a positive integer.\n");
-                return 0;
+                mainSize = 10;
               }
               if (mainSize <= 0) {
                 printf("Drags only allows the use of strings that are a positive integer\n");
-                return 0;
+                mainSize = 10;
               }
               break;
             case 't':
