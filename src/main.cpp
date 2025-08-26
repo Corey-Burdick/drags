@@ -111,6 +111,7 @@ int main(int argc, char* argv[]) {
       break;
     case sortMode::stable:
       std::stable_sort(mainVector.begin(), mainVector.end());
+      printf("Sorting using stable sort.\n");
       break;
     default:
       printf("Invalid Sort Mode. Closing...\n");
