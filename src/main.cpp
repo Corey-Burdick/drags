@@ -1,7 +1,7 @@
+#include <cstring>
+
 #include "dragsiolib.hpp"
 #include "dragsortlib.hpp"
-
-#include <cstring>
 
 // Drags - Quick and Dirty Random Array Generator and Sorter
 // Version 0.1.02 Stable
