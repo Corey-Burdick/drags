@@ -12,7 +12,7 @@
 
 int main(int argc, char* argv[]) {
   
-  char version[] = "0.1.05 Stable";
+  char version[] = "0.1.06 Stable";
   uint8_t sorter = sortMode::none;
   bool timerMode = false;
   bool verboseMode = false;
@@ -47,6 +47,9 @@ int main(int argc, char* argv[]) {
             case 'q':
               sorter = sortMode::quick;
               break;
+            case 's':
+              sorter = sortMode::stable;
+              break;
             case 'i':
               sorter = sortMode::intro;
               break;
@@ -66,7 +69,8 @@ int main(int argc, char* argv[]) {
               "-- [SORTING ALGORITHMS] --\n"
               "-b   Bubble Sort (Not recommended)\n"
               "-q   Quick Sort\n"
-              "-i   Intro Sort\n", version);
+              "-i   Intro Sort\n"
+              "-s   Stable Sort\n", version);
               return 0;
               break;
             default:
@@ -104,6 +108,9 @@ int main(int argc, char* argv[]) {
     case sortMode::intro:
       std::sort(mainVector.begin(), mainVector.end());
       printf("Sorting using intro sort.\n");
+      break;
+    case sortMode::stable:
+      std::stable_sort(mainVector.begin(), mainVector.end());
       break;
     default:
       printf("Invalid Sort Mode. Closing...\n");
